@@ -1,15 +1,15 @@
 package com.alistowi.gameOfLife;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class GameOfLifeTest {
+public class GameOfLifeUnboundedBoardTest {
 
 	@Test
 	public void shouldNotChangeStabil() {
 		//given
-		GameOfLife game = getStableGame();
+		GameOfLifeUnboundedBoard game = getStableGame();
 		
 		//when
 		game.processOnce();
@@ -18,8 +18,8 @@ public class GameOfLifeTest {
 		assertEquals(game, getStableGame());
 	}
 
-	private GameOfLife getStableGame() {
-		GameOfLife game = new GameOfLife(4);
+	private GameOfLifeUnboundedBoard getStableGame() {
+		GameOfLifeUnboundedBoard game = new GameOfLifeUnboundedBoard();
 		game.setAlive(new Coordinates(1, 1));
 		game.setAlive(new Coordinates(1, 2));
 		game.setAlive(new Coordinates(2, 1));

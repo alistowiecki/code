@@ -48,9 +48,7 @@ public class GameOfLife {
 		GameOfLife other = (GameOfLife) obj;
 		if (!Arrays.deepEquals(board, other.board))
 			return false;
-		if (boardSize != other.boardSize)
-			return false;
-		return true;
+		return boardSize == other.boardSize;
 	}
 
 	private void processSingleCell(Coordinates coordinate) {
